@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DESIC.CL | Desarrolladora de sistemas de información Chile</title>
+    <meta
+      name="description"
+      content="DESIC.CL: asesoría, implementación de mejoras de procesos, arquitectura y desarrollo de soluciones tecnológicas para empresas."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas class="webgl-bg" id="webgl-bg" aria-hidden="true"></canvas>
+    <div class="bg-atmosphere" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container header-wrap">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">
+          <img src="img/logoDsic.cl.jpeg" alt="Logo DSIC.CL" class="brand-logo" />
+          <span class="brand-text">
+            <strong>DESIC.CL</strong>
+            <small>Cyber Process Architecture</small>
+          </span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          ESCALERA
+        </button>
+
+        <nav class="main-nav" id="main-nav" aria-label="Escalera de navegación">
+          <div class="stair-rail" aria-hidden="true">
+            <span class="stair-progress" data-stair-progress></span>
+          </div>
+          <a href="#origenes" class="stair-link" data-step="1">
+            <span>01</span>
+            <em>Orígenes</em>
+            <svg class="sprout" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 19c.1-3.8 1.5-6.8 4.4-9.4" />
+              <path d="M15.4 8.6c.2-2.7 2.1-4.8 4.8-5.4.1 2.8-1.5 5.4-4.2 6.2" />
+              <path d="M12.6 12.1c-2.8.2-5.4-1.3-6.4-4 2.9-.2 5.7 1.1 7 3.8" />
+            </svg>
+          </a>
+          <a href="#mision" class="stair-link" data-step="2">
+            <span>02</span>
+            <em>Misión</em>
+            <svg class="sprout" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 19c.1-3.8 1.5-6.8 4.4-9.4" />
+              <path d="M15.4 8.6c.2-2.7 2.1-4.8 4.8-5.4.1 2.8-1.5 5.4-4.2 6.2" />
+              <path d="M12.6 12.1c-2.8.2-5.4-1.3-6.4-4 2.9-.2 5.7 1.1 7 3.8" />
+            </svg>
+          </a>
+          <a href="#vision" class="stair-link" data-step="3">
+            <span>03</span>
+            <em>Visión</em>
+            <svg class="sprout" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 19c.1-3.8 1.5-6.8 4.4-9.4" />
+              <path d="M15.4 8.6c.2-2.7 2.1-4.8 4.8-5.4.1 2.8-1.5 5.4-4.2 6.2" />
+              <path d="M12.6 12.1c-2.8.2-5.4-1.3-6.4-4 2.9-.2 5.7 1.1 7 3.8" />
+            </svg>
+          </a>
+          <a href="#exito" class="stair-link" data-step="4">
+            <span>04</span>
+            <em>Casos de éxito</em>
+            <svg class="sprout" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 19c.1-3.8 1.5-6.8 4.4-9.4" />
+              <path d="M15.4 8.6c.2-2.7 2.1-4.8 4.8-5.4.1 2.8-1.5 5.4-4.2 6.2" />
+              <path d="M12.6 12.1c-2.8.2-5.4-1.3-6.4-4 2.9-.2 5.7 1.1 7 3.8" />
+            </svg>
+          </a>
+          <a href="#proceso" class="stair-link" data-step="5">
+            <span>05</span>
+            <em>Casos en proceso</em>
+            <svg class="sprout" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 19c.1-3.8 1.5-6.8 4.4-9.4" />
+              <path d="M15.4 8.6c.2-2.7 2.1-4.8 4.8-5.4.1 2.8-1.5 5.4-4.2 6.2" />
+              <path d="M12.6 12.1c-2.8.2-5.4-1.3-6.4-4 2.9-.2 5.7 1.1 7 3.8" />
+            </svg>
+          </a>
+          <a href="#tecnologias" class="stair-link" data-step="6">
+            <span>06</span>
+            <em>Tecnologías</em>
+            <svg class="sprout" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 19c.1-3.8 1.5-6.8 4.4-9.4" />
+              <path d="M15.4 8.6c.2-2.7 2.1-4.8 4.8-5.4.1 2.8-1.5 5.4-4.2 6.2" />
+              <path d="M12.6 12.1c-2.8.2-5.4-1.3-6.4-4 2.9-.2 5.7 1.1 7 3.8" />
+            </svg>
+          </a>
+          <a href="#contacto" class="stair-link" data-step="7">
+            <span>07</span>
+            <em>Contáctenos</em>
+            <svg class="sprout" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 19c.1-3.8 1.5-6.8 4.4-9.4" />
+              <path d="M15.4 8.6c.2-2.7 2.1-4.8 4.8-5.4.1 2.8-1.5 5.4-4.2 6.2" />
+              <path d="M12.6 12.1c-2.8.2-5.4-1.3-6.4-4 2.9-.2 5.7 1.1 7 3.8" />
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="inicio">
+      <section class="hero reveal is-visible block block-1">
+        <div class="container hero-content">
+          <p class="eyebrow">Escala cibernética de servicios</p>
+          <h1>Sube cada escalón y activa un nuevo nivel de evolución digital</h1>
+          <p>
+            DESIC.CL es una empresa dedicada a la implementación, gestión, arquitectura,
+            optimización y desarrollo de aplicaciones, proyectos, mejoras y automatización
+            de procesos para distintas empresas.
+          </p>
+          <p>
+            Nuestra misión es entregar información, asesoría e implementación de mejoras
+            operacionales con foco en resultados concretos y sostenibles.
+          </p>
+        </div>
+      </section>
+
+      <section id="origenes" class="section reveal block block-2">
+        <div class="container split two-col">
+          <div class="media-wrap">
+            <img src="img/proceso-origenes.svg" alt="Diagrama de reingeniería y análisis de negocios" />
+          </div>
+          <div class="text-wrap">
+            <h2>Orígenes de la iniciativa</h2>
+            <div class="text-columns">
+              <p>
+                DESIC.cl nace a fines de 2024 a partir de una convicción profunda: el mundo
+                empresarial cumple un rol fundamental en la construcción de un mejor país.
+              </p>
+              <p>
+                La iniciativa surge con el propósito de acercar las nuevas tecnologías a
+                diversos sectores y modelos de negocio, facilitando la optimización de
+                procesos, la reducción de costos y la aceleración de los tiempos de
+                operación.
+              </p>
+              <p>
+                Todo ello con un claro enfoque en resultados, orientado a generar una mejor
+                experiencia y a poner la tecnología al servicio de los desafíos cotidianos
+                que enfrentan emprendedores, empresarios, trabajadores, sus familias y las
+                comunidades en las que las organizaciones están presentes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="mision" class="section reveal block block-3">
+        <div class="container split two-col reverse-desktop">
+          <div class="media-wrap">
+            <img src="img/proceso-mision.svg" alt="Ilustración conceptual de misión empresarial" />
+          </div>
+          <div class="text-wrap">
+            <h2>Misión</h2>
+            <div class="text-columns">
+              <p>
+                Proveer a las empresas acceso efectivo a nuevas tecnologías, servicios de
+                rediseño y reingeniería de procesos, con el objetivo de maximizar su
+                potencial competitivo.
+              </p>
+              <p>
+                Aportamos un know-how profundo y especializado de cada industria,
+                simplificando y optimizando cada etapa del flujo de trabajo desde las
+                operaciones más simples hasta los procesos de mayor complejidad para
+                generar eficiencia, valor sostenible y mejores resultados de negocio.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="vision" class="section reveal block block-4">
+        <div class="container split two-col">
+          <div class="media-wrap">
+            <img src="img/proceso-vision.svg" alt="Ilustración conceptual de visión empresarial" />
+          </div>
+          <div class="text-wrap">
+            <h2>Visión</h2>
+            <div class="text-columns">
+              <p>
+                Transformar la percepción de la implementación de procesos informáticos,
+                superando la idea de que son complejos, lejanos o de alto costo, para
+                integrarlos de manera natural como un componente esencial del proceso de
+                emprendimiento y crecimiento empresarial.
+              </p>
+              <p>
+                Aspiramos a consolidar un liderazgo reconocido a nivel regional,
+                impulsando la adopción tecnológica como un habilitador clave de
+                competitividad, innovación y desarrollo sostenible.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="exito" class="section reveal block block-5">
+        <div class="container">
+          <h2>Casos de éxito</h2>
+          <div class="carousel" data-carousel>
+            <button class="carousel-btn prev" type="button" data-action="prev" aria-label="Anterior">◀</button>
+            <div class="carousel-track" data-track>
+              <article class="slide is-active">
+                <div class="slide-media">
+                  <img src="img/balckFit.jpeg" alt="Gimnasio Black Fit" />
+                </div>
+                <div class="slide-text">
+                  <h3>Gimnasio Black Fit</h3>
+                  <p>Sistema de agendamiento de alumnos, planificación de clases y asistencias por biometría facial.</p>
+                </div>
+              </article>
+              <article class="slide">
+                <div class="slide-media">
+                  <img src="img/hr.jpeg" alt="Sin fotografía" />
+                </div>
+                <div class="slide-text">
+                  <h3>Mecánica Automotriz Heber Rodríguez</h3>
+                  <p>Sistema de agendamiento de horas, control de stock y seguimiento en línea de mantención y reparación de vehículos livianos multimarca.</p>
+                </div>
+              </article>
+            </div>
+            <button class="carousel-btn next" type="button" data-action="next" aria-label="Siguiente">▶</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="proceso" class="section reveal block block-6">
+        <div class="container">
+          <h2>Casos en proceso</h2>
+          <div class="carousel" data-carousel>
+            <button class="carousel-btn prev" type="button" data-action="prev" aria-label="Anterior">◀</button>
+            <div class="carousel-track" data-track>
+              <article class="slide is-active">
+                <div class="slide-media">
+                  <img src="img/qDS.jpg" alt="Sistema Quantum ds" />
+                </div>
+                <div class="slide-text">
+                  <h3>Cliente privado</h3>
+                  <p>Upgrade y reingeniería de sistema interfaz para máquinas Quantum ds, escaneo y endoso de documentos valorados y no valorados.</p>
+                </div>
+              </article>
+            </div>
+            <button class="carousel-btn next" type="button" data-action="next" aria-label="Siguiente">▶</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="tecnologias" class="section reveal block block-7">
+        <div class="container">
+          <h2>Tecnologías utilizadas</h2>
+          <p class="section-intro">
+            Usamos distintas IAs para las distintas actividades, entre las cuales destaca
+            Ollama, entrenada de manera local y offline para la privacidad de datos
+            sensibles. Trabajamos con tecnologías de licenciamiento MIT y GNU GPL, salvo
+            que el cliente solicite una tecnología particular.
+          </p>
+
+          <div class="carousel logos-carousel" data-carousel>
+            <button class="carousel-btn prev" type="button" data-action="prev" aria-label="Anterior">◀</button>
+            <div class="carousel-track" data-track>
+              <article class="slide is-active logo-slide">
+                <div class="slide-media logo-media"><img src="https://cdn.simpleicons.org/angular/DD0031" alt="Angular" /></div>
+                <div class="slide-text"><h3>Angular</h3></div>
+              </article>
+              <article class="slide logo-slide">
+                <div class="slide-media logo-media"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React JS" /></div>
+                <div class="slide-text"><h3>React JS</h3></div>
+              </article>
+              <article class="slide logo-slide">
+                <div class="slide-media logo-media"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" /></div>
+                <div class="slide-text"><h3>MySQL</h3></div>
+              </article>
+              <article class="slide logo-slide">
+                <div class="slide-media logo-media"><img src="img/sqlServer.jpg" alt="SQL Server" /></div>
+                <div class="slide-text"><h3>SQL Server</h3></div>
+              </article>
+              <article class="slide logo-slide">
+                <div class="slide-media logo-media"><img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" /></div>
+                <div class="slide-text"><h3>n8n</h3></div>
+              </article>
+              <article class="slide logo-slide">
+                <div class="slide-media logo-media"><img src="https://cdn.simpleicons.org/arduino/00979D" alt="Arduino" /></div>
+                <div class="slide-text"><h3>Arduino</h3></div>
+              </article>
+              <article class="slide logo-slide">
+                <div class="slide-media logo-media"><img src="https://cdn.simpleicons.org/androidstudio/3DDC84" alt="Android Studio" /></div>
+                <div class="slide-text"><h3>Android Studio</h3></div>
+              </article>
+              <article class="slide logo-slide">
+                <div class="slide-media logo-media"><img src="img/vb60.jpg" alt="Visual Basic 6.0" /></div>
+                <div class="slide-text"><h3>VB60</h3></div>
+              </article>
+            </div>
+            <button class="carousel-btn next" type="button" data-action="next" aria-label="Siguiente">▶</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="section reveal block block-8">
+        <div class="container contact">
+          <h2>Contáctenos</h2>
+          <p>Nos encantaría saber de ti. Por favor, contáctanos utilizando la información a continuación.</p>
+          <ul class="contact-list">
+            <li><strong>E-Mail:</strong> contacto@desic.001webhospedaje.com/</li>
+            <li><strong>Dirección:</strong> Diagonal 23 1/2 Norte D 3877, Talca, Región del Maule, Chile</li>
+            <li><strong>Teléfono:</strong> +59 965863188</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r160/three.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

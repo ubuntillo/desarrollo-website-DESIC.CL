@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#2a4157"/>
+  <rect x="140" y="110" width="1000" height="500" rx="18" fill="none" stroke="#dcecff" stroke-width="6" stroke-dasharray="14 10"/>
+  <g fill="#dcecff" font-family="Source Sans Pro, Arial, sans-serif" text-anchor="middle">
+    <text x="640" y="350" font-size="62" font-weight="700">Sin fotografía</text>
+    <text x="640" y="410" font-size="30" opacity="0.9">Imagen referencial pendiente de carga</text>
+  </g>
+</svg>
