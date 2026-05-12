@@ -2,6 +2,34 @@ const revealElements = document.querySelectorAll('.reveal');
 const stairLinks = Array.from(document.querySelectorAll('.stair-link'));
 const stairProgress = document.querySelector('[data-stair-progress]');
 
+function mountTraceFrames() {
+  const blocks = document.querySelectorAll('.block > .container');
+
+  blocks.forEach((container) => {
+    if (container.querySelector('.trace-frame')) {
+      return;
+    }
+
+    const ns = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('class', 'trace-frame');
+    svg.setAttribute('viewBox', '0 0 100 100');
+    svg.setAttribute('preserveAspectRatio', 'none');
+
+    const framePath = document.createElementNS(ns, 'path');
+    framePath.setAttribute('class', 'trace-path');
+    framePath.setAttribute('d', 'M6 24 V7 H30 M30 7 H93 V38 M93 38 V93 H70 M70 93 H7 V68 M7 68 V24');
+
+    const altPath = document.createElementNS(ns, 'path');
+    altPath.setAttribute('class', 'trace-path trace-alt');
+    altPath.setAttribute('d', 'M15 88 H35 M35 88 V80 H65 V88 H86 M13 14 H24 V24 H13 V14');
+
+    svg.appendChild(framePath);
+    svg.appendChild(altPath);
+    container.appendChild(svg);
+  });
+}
+
 function initWebglBackground() {
   const canvas = document.getElementById('webgl-bg');
   const allowMotion = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -136,6 +164,7 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
+        entry.target.classList.add('is-energized');
       } else {
         entry.target.classList.remove('is-visible');
       }
@@ -265,3 +294,4 @@ updateStairState();
 document.addEventListener('scroll', updateStairState, { passive: true });
 window.addEventListener('resize', updateStairState);
 initWebglBackground();
+mountTraceFrames();
